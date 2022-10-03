@@ -14,14 +14,15 @@ class InmoModel {
     }
 
     public function showWithFilters(){
-        if ($_POST['filtro']=='lote'){
-            $query = $this->db->prepare("SELECT * FROM propiedades WHERE tipo=lote"); 
-        }
+
 
     }
 
-    public function ShowDetails(){
-        
+    public function showPropertieDetail($id){
+        $query = $this->db->prepare("SELECT * FROM propiedades WHERE id=?");
+        $query->execute(array($id));
+        $propertie = $query->fetch(PDO::FETCH_OBJ);
+        return $propertie;
     }
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-09-30 23:02:37
+/* Smarty version 4.2.1, created on 2022-10-03 23:05:27
   from '/Applications/XAMPP/xamppfiles/htdocs/web2/tpe/templates/propiedades.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6337596dee4b71_17802148',
+  'unifunc' => 'content_633b4e97cda782_73357500',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '71fc70bd01a6818611b50da7d0239d0e86c470a3' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/web2/tpe/templates/propiedades.tpl',
-      1 => 1664571750,
+      1 => 1664831120,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6337596dee4b71_17802148 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633b4e97cda782_73357500 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
  <form method='POST' id='filtro'>
@@ -45,7 +45,8 @@ $_smarty_tpl->tpl_vars['propertie']->do_else = false;
 ?>
            <tbody class="table-group-divider">
                     <tr>
-                        <td> <?php echo $_smarty_tpl->tpl_vars['propertie']->value->direccion;?>
+                        <td><a href="detalle/<?php echo $_smarty_tpl->tpl_vars['propertie']->value->id;?>
+"> <?php echo $_smarty_tpl->tpl_vars['propertie']->value->direccion;?>
  </td>
                         <td> <?php echo $_smarty_tpl->tpl_vars['propertie']->value->tipo;?>
  </td>
@@ -55,6 +56,8 @@ $_smarty_tpl->tpl_vars['propertie']->do_else = false;
  </td>
                         <td> <?php echo $_smarty_tpl->tpl_vars['propertie']->value->alquiler_venta;?>
  </td>
+                        <td> <button id="borrar">BORRAR </td>
+                        <td> <button id="editar">EDITAR </td>
                     </tr>
            </tbody>
     <?php ob_start();

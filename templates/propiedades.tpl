@@ -15,11 +15,13 @@
     {foreach from=$properties item=$propertie}
            <tbody class="table-group-divider">
                     <tr>
-                        <td> {$propertie->direccion} </td>
+                        <td><a href="detalle/{$propertie->id}"> {$propertie->direccion} </td>
                         <td> {$propertie->tipo} </td>
                         <td> {$propertie->habitaciones} </td>
                         <td> {$propertie->precio} </td>
                         <td> {$propertie->alquiler_venta} </td>
+                        <td> <button id="borrar">BORRAR </td>
+                        <td> <button id="editar">EDITAR </td>
                     </tr>
            </tbody>
     {{/foreach}}      
