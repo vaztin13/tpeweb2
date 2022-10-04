@@ -25,7 +25,7 @@ function content_633b4b6e329063_47682679 (Smarty_Internal_Template $_smarty_tpl)
 $_smarty_tpl->_subTemplateRender("file:templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<h1><?php echo $_smarty_tpl->tpl_vars['propertie']->value->direccion;?>
+<h1><?php echo $_smarty_tpl->tpl_vars['properta']->value->direccion;?>
 </h1>
 <h2><?php echo $_smarty_tpl->tpl_vars['propertie']->value->tipo;?>
 </h2>

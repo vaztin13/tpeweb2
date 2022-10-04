@@ -12,21 +12,21 @@ class InmoController {
     }
 
     public function showProperties(){
-        $propertie = $this ->model->getAllProperties();
-        $this->view->showProperties($propertie);
+        $property = $this ->model->getAllProperties();
+        $this->view->showProperties($property);
     }
 
     public function showAdminPage(){
         $this->view->Logadmin();
     }
    
-    public function showfilters(){
+    public function showFilters(){
         $tipo = $this ->model->showWithFilters();
-        $this->view->showfilters($tipo);
+        $this->view->showFilters($tipo); 
     }
 
-    public function showdetail($id){
-        $itemselected = $this->model->showPropertieDetail($id);
-        $this->view->showDetails($itemselected);
+    public function showProperty($id){
+        $itemSelected = $this->model->showPropertyDetail($id);
+        $this->view->showProperty($itemSelected);
     }
 }

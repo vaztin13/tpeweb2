@@ -14,15 +14,17 @@ class InmoView {
         $this->smarty->assign('properties', $properties);
 
         // mostrar el tpl
-        $this->smarty->display('propiedades.tpl');
+        $this->smarty->display('templates/propiedades.tpl');
     } 
 
     function Logadmin(){
-        $this->smarty->display('administrador.tpl');
+        $this->smarty->display('templates/administrador.tpl');
     }
 
-    function showDetails($propertie){
-        $this->smarty->assign('detalle',$propertie);
-        $this->smarty->display('templates/detail.tpl');
+    function showProperty($property){
+        //me aseguro de escribir bien la asignacion y la variable...je
+        $this->smarty->assign('property',$property); //habias llamado a la asignacion, 'detalle' y despues la llamabas con
+                                                    // propertie, nunca iba a andar
+        $this->smarty->display('templates/detail.tpl'); 
     }
 }

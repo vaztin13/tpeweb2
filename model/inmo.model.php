@@ -18,11 +18,11 @@ class InmoModel {
 
     }
 
-    public function showPropertieDetail($id){
+    public function showPropertyDetail($id){
         $query = $this->db->prepare("SELECT * FROM propiedades WHERE id=?");
         $query->execute(array($id));
-        $propertie = $query->fetch(PDO::FETCH_OBJ);
-        return $propertie;
+        $property = $query->fetch(PDO::FETCH_OBJ);
+        return $property; //singular mostrando la propiedad seleccionada
     }
 
 

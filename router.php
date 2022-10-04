@@ -1,10 +1,10 @@
 <?php
 require_once './controller/inmo.controller.php';
 
-define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
-$action = 'propiedades'; 
+define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
+$action = 'propiedades';
 
-if (!empty($_GET['action'])) { 
+if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
 
@@ -17,11 +17,11 @@ switch ($params[0]) {
         $inmoController->showProperties();
         break;
     case 'detalle':
-        $inmoController->showdetail($params[1]);
+        $inmoController->showProperty($params[1]);
     case 'administrador':
-       $inmoController->showAdminPage();
+        $inmoController->showAdminPage();
         break;
     default:
-        echo('404 Page not found');
+        echo ('404 Page not found');
         break;
 }
