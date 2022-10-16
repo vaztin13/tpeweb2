@@ -1,8 +1,32 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-11 01:55:59
+  from '/Applications/XAMPP/xamppfiles/htdocs/web2/tpe/templates/header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6344b10f6d2718_70299776',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '59b8e08cc9147a1269f55668cb384a2d41d48910' => 
+    array (
+      0 => '/Applications/XAMPP/xamppfiles/htdocs/web2/tpe/templates/header.tpl',
+      1 => 1665181267,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6344b10f6d2718_70299776 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <base href="{BASE_URL}" /> 
+    <base href="<?php echo BASE_URL;?>
+" /> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,16 +49,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="propiedades">PROPIEDADES</a>
                     </li>
-                    {if !isset($smarty.session.USER_EMAIL)}
+                    <?php if (!(isset($_SESSION['USER_EMAIL']))) {?>
                     <li class="nav-item">
                         <a class="nav-link active" href="login">login</a>
                     </li>
-                    {else}
+                    <?php } else { ?>
                         <li class="nav-item">
-                        <a class="nav-link active" href="logout">logout({$smarty.session.USER_EMAIL})</a>
+                        <a class="nav-link active" href="logout">logout(<?php echo $_SESSION['USER_EMAIL'];?>
+)</a>
                     </li>
-                    {/if}
+                    <?php }?>
 
             </div>
         </div>
     </nav>
+<?php }
+}

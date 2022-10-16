@@ -1,8 +1,32 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-16 02:19:06
+  from 'C:\xampp\htdocs\alfontp\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_634b4dfa90b0e8_34001888',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '123e6cc345e12f4352222a7d6b5e88c46b101811' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\alfontp\\templates\\header.tpl',
+      1 => 1665777523,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_634b4dfa90b0e8_34001888 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <base href="{BASE_URL}" /> 
+    <base href="<?php echo BASE_URL;?>
+" /> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,16 +49,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="propiedades">PROPIEDADES</a>
                     </li>
-                    {if !isset($smarty.session.USER_EMAIL)}
+                    <?php if (!(isset($_SESSION['USER_EMAIL']))) {?>
                     <li class="nav-item">
                         <a class="nav-link active" href="login">login</a>
                     </li>
-                    {else}
+                    <?php } else { ?>
                         <li class="nav-item">
-                        <a class="nav-link active" href="logout">logout({$smarty.session.USER_EMAIL})</a>
+                        <a class="nav-link active" href="logout">logout(<?php echo $_SESSION['USER_EMAIL'];?>
+)</a>
                     </li>
-                    {/if}
+                    <?php }?>
 
             </div>
         </div>
     </nav>
+<?php }
+}
